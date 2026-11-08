@@ -40,13 +40,13 @@ if ($existing) {
 }
 
 Write-Host "`n[4/4] 推送" -ForegroundColor Cyan
-git push -u origin master
+git push -u origin HEAD:main
 
 Write-Host "`n✅ 推送完成" -ForegroundColor Green
 Write-Host ""
 Write-Host "接下来在浏览器里做两件事：" -ForegroundColor Yellow
 Write-Host "  1. 打开 https://github.com/$GitHubUser/$RepoName/settings/pages"
-Write-Host "  2. Source 选「Deploy from a branch」→ Branch 选 master / (root) → Save"
+Write-Host "  2. Source 选「Deploy from a branch」→ Branch 选 main / docs → Save"
 Write-Host ""
 Write-Host "等 1-2 分钟后访问："
 Write-Host "  https://$GitHubUser.github.io/$RepoName/" -ForegroundColor Green
