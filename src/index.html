@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#FDFCFA">
+<title>__TITLE__</title>
+<meta name="description" content="__SUBTITLE__">
+<meta property="og:title" content="__TITLE__">
+<meta property="og:description" content="__SUBTITLE__">
+<style>
+__STYLE__
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <!-- ============ 封面 ============ -->
+  <section class="screen screen--cover is-active" data-screen="cover">
+    <header class="cover__kicker" data-bind="kicker"></header>
+
+    <div class="cover__body">
+      <h1 class="cover__title" data-cover-title></h1>
+      <div class="cover__rule"></div>
+      <p class="cover__sub" data-bind="subtitle"></p>
+    </div>
+
+    <div class="cover__meta">
+      <span class="cover__stat" data-bind="hook"></span>
+      <span class="cover__stat-line"></span>
+      <span class="cover__stat" data-bind="avgTime"></span>
+    </div>
+
+    <button class="btn btn--primary" data-act="start">
+      <span data-bind="startBtn"></span>
+      <svg viewBox="0 0 24 24" class="btn__arrow" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+    </button>
+
+    <p class="cover__foot">结果仅供自我观察，不作任何专业诊断</p>
+  </section>
+
+  <!-- ============ 答题 ============ -->
+  <section class="screen screen--quiz" data-screen="quiz">
+    <div class="progress"><i data-progress-bar></i></div>
+
+    <div class="quiz__head">
+      <button class="icon-btn" data-act="back" aria-label="上一题">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      </button>
+      <div class="quiz__counter"><b data-idx>01</b><span>/</span><span data-total></span></div>
+      <div class="quiz__hint">凭第一直觉</div>
+    </div>
+
+    <div class="quiz__body">
+      <h2 class="quiz__q" data-question></h2>
+      <div class="quiz__opts" data-options></div>
+    </div>
+  </section>
+
+  <!-- ============ 计算中 ============ -->
+  <section class="screen screen--loading" data-screen="loading">
+    <div class="loading__inner">
+      <div class="loading__rule"></div>
+      <p class="loading__text" data-loading-text></p>
+      <p class="loading__line" data-loading-line></p>
+    </div>
+  </section>
+
+  <!-- ============ 结果 ============ -->
+  <section class="screen screen--result" data-screen="result">
+    <div class="result__scroll">
+
+      <div class="card__no" data-dossier></div>
+
+      <div class="card__seal" data-seal></div>
+
+      <h1 class="card__name" data-bind="name"></h1>
+      <p class="card__title" data-bind="title"></p>
+      <p class="card__era"><span data-bind="era"></span><i></i><span data-bind="role"></span></p>
+
+      <blockquote class="card__quote" data-bind="quote"></blockquote>
+
+      <ul class="card__traits" data-traits></ul>
+
+      <div class="result__tags" data-tags></div>
+
+      <div class="divider"></div>
+      <p class="block__label" data-bind="layout.blocks.story"></p>
+      <p class="story" data-bind="story"></p>
+
+      <div class="divider"></div>
+      <p class="block__label" data-bind="layout.blocks.desc"></p>
+      <div class="result__desc" data-desc></div>
+
+      <div class="divider"></div>
+      <p class="block__label" data-bind="layout.blocks.dims"></p>
+      <div class="result__dims" data-dims></div>
+
+      <div class="divider"></div>
+      <p class="block__label" data-bind="layout.blocks.second"></p>
+      <div class="second" data-second></div>
+
+      <div class="divider"></div>
+      <p class="block__label" data-bind="layout.blocks.same"></p>
+      <p class="same-count" data-same></p>
+
+      <div class="result__actions">
+        <button class="btn btn--primary" data-act="poster">生成分享长图</button>
+        <button class="btn btn--ghost" data-act="restart">再测一次</button>
+      </div>
+
+      <p class="cover__foot">结果仅供自我观察，不作任何专业诊断</p>
+    </div>
+  </section>
+
+  <!-- ============ 海报 ============ -->
+  <section class="screen screen--poster" data-screen="poster">
+    <div class="poster__wrap">
+      <canvas class="poster__canvas" data-poster></canvas>
+      <p class="poster__tip">长按图片保存，发到评论区让朋友也来测</p>
+      <div class="result__actions">
+        <button class="btn btn--ghost" data-act="back-result">返回结果</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+<script>window.__QUIZ__ = __DATA__;</script>
+<script>
+__SCRIPT__
+</script>
+</body>
+</html>

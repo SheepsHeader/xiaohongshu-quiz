@@ -1,0 +1,28 @@
+{
+  "slug": "historical-figures",
+  "title": "你最像历史里的哪个人物",
+  "titleLines": ["你最像", "历史里的", "哪个人物"],
+  "kicker": "人格考古 · 第一卷",
+  "subtitle": "20 道题，照见你的前世人设\n别想太多，凭第一直觉选。",
+  "avgTime": "约 3 分钟",
+  "startBtn": "开始照见",
+  "rarityLabel": "稀有度",
+  "rarityText": "全国仅 {pct}% 的人属于这一类",
+  "loadingSteps": ["正在翻检史书的边角…", "比对人物原型…", "你的前世人设正在显影…"],
+  "theme": { "accent": "#A63A50" },
+  "layout": {
+    "blocks": {
+      "story": "那个时刻",
+      "desc": "三个切面",
+      "dims": "你的坐标",
+      "second": "还有一面",
+      "same": "和你同一类"
+    },
+    "poster": {
+      "kicker": "人 格 考 古",
+      "lead": "你的前世人设是",
+      "title": "你最像历史里的哪个人物？",
+      "foot": "20 道题 · 3 分钟 · 照见你的前世人设"
+    }
+  }
+}

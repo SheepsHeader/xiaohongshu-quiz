@@ -1,0 +1,7 @@
+﻿# 本地进度笔记，不入库
+PROGRESS*.md
+
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
